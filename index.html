@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M. Saravanakumar | Research Portfolio</title>
+
+<!-- Icons & Font -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --c1:#00e5ff;
+  --c2:#7c4dff;
+  --c3:#ff4fd8;
+  --glass:rgba(255,255,255,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+html{scroll-behavior:smooth;}
+body{
+  background:radial-gradient(circle at top,#0b1a2a,#000);
+  color:#fff;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+}
+.logo{display:flex;align-items:center;gap:12px;}
+.logo img{width:48px;}
+.logo h1{
+  font-size:22px;
+  background:linear-gradient(135deg,var(--c1),var(--c2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+nav a{
+  color:#fff;text-decoration:none;margin:0 14px;font-weight:500;
+}
+nav a:hover{color:var(--c1);}
+
+/* LANGUAGE */
+.lang{
+  text-align:center;
+  margin-top:10px;
+}
+.lang button{
+  background:linear-gradient(135deg,var(--c1),var(--c2));
+  border:none;
+  padding:8px 18px;
+  border-radius:20px;
+  margin:0 5px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:60px;
+  padding:40px;
+}
+.hero img{
+  width:260px;
+  border-radius:50%;
+  border:6px solid var(--c1);
+  box-shadow:0 0 40px rgba(0,229,255,.6);
+}
+.hero-text h2{font-size:44px;}
+.hero-text span{
+  background:linear-gradient(135deg,var(--c1),var(--c3));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero-text p{opacity:.85;margin-top:10px;max-width:560px;}
+.hero-text a{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 26px;
+  border-radius:30px;
+  background:linear-gradient(135deg,var(--c1),var(--c3));
+  color:#000;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* SECTION */
+section{padding:80px 60px;}
+section h2{text-align:center;font-size:36px;margin-bottom:50px;}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+.card{
+  background:var(--glass);
+  border-radius:20px;
+  padding:32px;
+  text-align:center;
+  backdrop-filter:blur(14px);
+  transition:.4s;
+}
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 0 40px rgba(0,229,255,.5);
+}
+.icon{
+  font-size:46px;
+  margin-bottom:15px;
+  background:linear-gradient(135deg,var(--c1),var(--c2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.count{font-size:40px;font-weight:700;color:var(--c1);}
+
+/* LINKS */
+a.card{color:#fff;text-decoration:none;}
+.fa-whatsapp{color:#25D366;}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+.gallery img{
+  width:100%;
+  border-radius:18px;
+  transition:.4s;
+}
+.gallery img:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 40px rgba(255,79,216,.6);
+}
+
+/* CONTACT FORM */
+form{
+  max-width:600px;
+  margin:auto;
+}
+input,textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:8px;
+  border:none;
+}
+button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,var(--c1),var(--c2));
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  background:#000;
+  opacity:.85;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+  header{flex-direction:column;}
+  .hero{flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png">
+    <h1>M. Saravanakumar</h1>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#publications">Publications</a>
+    <a href="#awards">Awards</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="lang">
+  <button onclick="setLang('en')">English</button>
+  <button onclick="setLang('ta')">தமிழ்</button>
+</div>
+
+<div class="hero">
+  <img src="1.jpg">
+  <div class="hero-text">
+    <h2>Hello, I'm <span>M. Saravanakumar</span></h2>
+    <p id="heroText">
+      M.Sc Computer Science | AI & ML Researcher | Author | Award Winner
+    </p>
+    <a href="M.SaravanaKumarcv.pdf" download>
+      <i class="fa-solid fa-download"></i> Download CV
+    </a>
+  </div>
+</div>
+
+<section id="about">
+<h2>Academic Profile</h2>
+<div class="grid">
+  <div class="card"><div class="icon"><i class="fa-solid fa-user-graduate"></i></div>M.Sc Computer Science</div>
+  <div class="card"><div class="icon"><i class="fa-solid fa-brain"></i></div>AI, ML, OCR, Image Processing</div>
+  <div class="card"><div class="icon"><i class="fa-solid fa-feather"></i></div>Poet & Social Activist</div>
+</div>
+</section>
+
+<section id="publications">
+<h2>Publications</h2>
+<div class="grid">
+  <div class="card"><div class="icon"><i class="fa-solid fa-microphone"></i></div><div class="count">11</div>Conferences</div>
+  <div class="card"><div class="icon"><i class="fa-solid fa-journal-whills"></i></div><div class="count">11</div>Journal Papers</div>
+  <div class="card"><div class="icon"><i class="fa-solid fa-book"></i></div><div class="count">1</div>Book</div>
+</div>
+</section>
+
+<section id="awards">
+<h2>Awards</h2>
+<div class="gallery">
+  <img src="award1.jpg">
+  <img src="award2.jpg">
+  <img src="award3.jpg">
+  <img src="award4.jpg">
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+
+<div class="grid">
+  <a class="card" href="mailto:saravanakumasr@gmail.com">
+    <div class="icon"><i class="fa-solid fa-envelope"></i></div>Email
+  </a>
+
+  <a class="card" target="_blank" href="https://wa.me/918681819168">
+    <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>WhatsApp
+  </a>
+
+  <a class="card" target="_blank"
+     href="https://www.google.com/maps/search/?api=1&query=Thiruthangal+Sivakasi+Tamil+Nadu">
+    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>Location
+  </a>
+</div>
+
+<form action="https://formsubmit.co/saravanakumasr@gmail.com" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+</section>
+
+<a href="https://wa.me/918681819168" target="_blank"
+style="
+position:fixed;bottom:25px;right:25px;
+background:#25D366;width:60px;height:60px;
+border-radius:50%;display:flex;
+align-items:center;justify-content:center;
+color:#fff;font-size:28px;
+box-shadow:0 0 20px #25D366;">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<footer>
+© 2026 M. Saravanakumar | Academic Portfolio
+</footer>
+
+<script>
+function setLang(lang){
+  document.getElementById("heroText").innerText =
+    (lang==='ta')
+    ? "எம்.எஸ்.சி கணினி அறிவியல் | செயற்கை நுண்ணறிவு ஆராய்ச்சியாளர் | எழுத்தாளர் | விருது பெற்றவர்"
+    : "M.Sc Computer Science | AI & ML Researcher | Author | Award Winner";
+}
+</script>
+
+</body>
+</html>
